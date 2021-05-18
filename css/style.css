@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'Domkrat';
+    src: url('../fonts/Domkrat\ Regular.eot');
+    src: local('☺'), url('../fonts/Domkrat\ Regular.woff') format('woff'), url('../fonts/Domkrat\ Regular.ttf') format('truetype'), url('../fonts/Domkrat\ Regular.otf') format('opentype'), url('../fonts/Domkrat\ Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Domkrat';
+    src: url('../fonts/Domkrat\ Bold.eot');
+    src: local('☺'), url('../fonts/Domkrat\ Bold.ttf') format('truetype'), url('../fonts/Domkrat\ Bold.woff') format('woff'), url('../fonts/Domkrat\ Bold.otf') format('opentype'), url('../fonts/Domkrat\ Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Domkrat', sans-serif;
+    font-size: 16px;
+}
+p {
+    max-width: 300px;
+    margin-bottom: 0;
+    position: absolute;
+    top: 30px;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 2px 0 0 #87533b, 0 2px 0 #87533b, -2px 0 0 #87533b, 0 -2px 0 #87533b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container-fluid {
+    background: #fff url('../images/bg.jpg') center/cover no-repeat;
+}
+.container-fluid > .row {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form > .form-group {
+    height: 54px;
+}
+.form-group {
+    margin-bottom: 30px;
+}
+.form-group:not(.form-check) {
+    background: transparent url('../images/social\ line.png') center/contain no-repeat;
+    width: 100%;
+    position: relative;
+}
+.form-group:not(.form-check)::before, .form-group:not(.form-check)::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+.form-group:not(.form-check):nth-child(odd)::before, .form-group:not(.form-check):nth-child(even)::after {
+    top: -8px;
+}
+.form-group:not(.form-check):nth-child(odd)::after, .form-group:not(.form-check):nth-child(even)::before {
+    bottom: 0;
+}
+.form-group:not(.form-check)::before {
+    background-image: url('../images/nail1.png');
+    background-position: right;
+    left: -16px;
+}
+.form-group:not(.form-check)::after {
+    background-image: url('../images/nail2.png');
+    background-position: left;
+    right: -16px;
+}
+.form-control, .form-control:focus  {
+    background-color: transparent;
+}
+.form-control {
+    height: 54px;
+    padding: .375rem calc(24px + .375rem);
+    color: rgba(255,255,255,.75);
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 0 0 rgba(0,0,0,.25), 0 2px 0 rgba(0,0,0,.25), -2px 0 0 rgba(0,0,0,.25), 0 -2px 0 rgba(0,0,0,.25);
+    border: none;
+}
+.form-control::placeholder {
+    color: rgba(255,255,255,.5);
+}
+.form-control:focus {
+    color: #fff;
+    box-shadow: none;
+}
+.card {
+    background-color: transparent;
+    min-width: 332px;
+    border: none;
+}
+.card-header {
+    background: transparent url('../images/title\ no\ leaf.png') center/contain no-repeat;
+    height: 52px;
+    margin-bottom: -25px;
+    padding: 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 0 0 #87533B, 0 2px 0 #87533B, -2px 0 0 #87533B, 0 -2px 0 #87533B;
+    border: none;
+    z-index: 1;
+}
+.card-body {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.welcome .card-body {
+    background: transparent url('../images/wooden_big.png') center -25px/100% 500px no-repeat;
+}
+.auth .card-body {
+    background: transparent url('../images/wooden\ social.png') center top/contain no-repeat;
+    padding-top: 92px;
+}
+.form-check {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.form-check-input {
+    display: none;
+}
+.form-check-input + .form-check-label {
+    background-color: transparent;
+    background-image: url('../images/frame2.png'), url('../images/checkbox.png');
+    background-position: right center, 5px 5px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 40px, auto 30px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transform: rotate(9deg);
+    cursor: pointer;
+}
+.form-check-input + .form-check-label::before {
+    content: '';
+    background: transparent url('../images/nail2.png') center/contain no-repeat;
+    position: absolute;
+    top: -12px;
+    left: -2px;
+    width: 24px;
+    height: 24px;
+    transform: rotate(-9deg);
+}
+.form-check-input:checked + .form-check-label::after {
+    content: '';
+    background: transparent url('../images/check\ green.png') center/contain no-repeat;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form-check > .form-check-label:last-child {
+    margin-left: 1rem;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 2px 0 0 #87533B, 0 2px 0 #87533B, -2px 0 0 #87533B, 0 -2px 0 #87533B;
+    cursor: pointer;
+}
+.form > .btn {
+    margin: 0 auto;
+}
+.form > .btn:not(:last-child) {
+    margin-bottom: 30px;
+}
+.btn, .btn:hover, .btn:focus, .btn:active {
+    color: #fff!important;
+}
+.btn {
+    width: 140px;
+    height: 54px;
+    border: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.btn:hover, .btn:active, .btn:focus {
+    background-color: transparent!important;
+}
+.btn:active, .btn:focus {
+    box-shadow: none!important;
+}
+.btn-success {
+    background: transparent url('../images/button\ green\ frame.png') center/contain no-repeat;
+    text-shadow: 2px 0 0 #708504, 0 2px 0 #708504, -2px 0 0 #708504, 0 -2px 0 #708504;
+}
+.btn-warning {
+    background: transparent url('../images/button\ orange.png') center/contain no-repeat;
+    text-shadow: 2px 0 0 #D47203, 0 2px 0 #D47203, -2px 0 0 #D47203, 0 -2px 0 #D47203;
+}
+.welcome .card-body {
+    padding: 25px 15px 35px;
+    display: flex;
+    justify-content: center;
+}
+.welcome .card-body > .btn:not(:last-child) {
+    margin-bottom: 30px;
+}
+/* dashboard */
+.wrapper {
+    background: #fff url('../images/panels.jpg') center/cover no-repeat;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    width: 180px;
+    transform-origin: left top;
+}
+.left > div:first-child {
+    background-color: transparent;
+    background-image: url('../images/panels\ score\ leafs.png'), url('../images/panels\ progress\ full.png'), url('../images/panels\ score\ wooden.png');
+    background-position: left top, left 18px, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: auto 120px, 165px auto, auto 180px;
+    height: 180px;
+    padding: 0 45px 45px 0;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 4px 0 0 #87533b, 0 4px 0 #87533b, -4px 0 0 #87533b, 0 -4px 0 #87533b;
+}
+.left > div:first-child > span:first-child {
+    font-size: 36px;
+    line-height: 41px;
+}
+.left > div:first-child > span:last-child {
+    font-size: 48px;
+    line-height: 40px;
+}
+.left > div:last-child {
+    background-image: url('../images/panels\ left.png');
+    min-height: 789px;
+}
+.left > div:first-child, .right > div:first-child {
+    width: 180px;
+    display: flex;
+    align-items: center;
+}
+.left > div:last-child, .right > div:last-child {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 180px auto;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.right {
+    width: 180px;
+    transform-origin: right top;
+}
+.right > div:first-child {
+    height: 164px;
+}
+.right > div:first-child > div {
+    background: transparent url('../images/buttons_02.png') center/72px auto no-repeat;
+    width: 72px;
+    height: 72px;
+    margin: 10px auto 0 0;
+    cursor: pointer;
+}
+.right > div:last-child {
+    background-image: url('../images/panels\ right.png');
+    min-height: 805px;
+}
+.map {
+    transform-origin: center top;
+    width: 1920px;
+    height: 969px;
+}
+.map > div {
+    margin-top: 164px;
+    width: 100%;
+    height: calc(100% - 164px);
+    position: relative;
+}
+.map > div > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.map > div > div {
+    background-color: rgba(0,0,0,.25);
+    background: transparent url('../images/button\ circle\ green.png') center/100% 100% no-repeat;
+    position: absolute;
+    transform-origin: 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.left > div:last-child > div:first-child, .left > div:last-child > div:not(:first-child) > div {
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.left > div:last-child > div:first-child {
+    background-image: url('../images/panels\ left\ counter.png');
+    background-size: 120px auto;
+    width: 120px;
+    height: 96px;
+    justify-content: center;
+    color: #fff;
+}
+.left > div:last-child > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+.left > div:last-child > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left > div:last-child > div:first-child > span {
+    text-shadow: 4px 0 0 #87533b, 0 4px 0 #87533b, -4px 0 0 #87533b, 0 -4px 0 #87533b;
+}
+.left > div:last-child > div:first-child > span:first-child {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 52px;
+}
+.left > div:last-child > div:first-child > span:nth-child(2) {
+    font-size: 32px;
+    line-height: 32px;
+}
+.left > div:last-child > div:not(:first-child) {
+    width: 108px;
+}
+.left > div:last-child > div:nth-child(2) > div {
+    background-image: url('../images/target1.png');
+}
+.left > div:last-child > div:nth-child(3) > div {
+    background-image: url('../images/target2.png');
+}
+.left > div:last-child > div:not(:first-child) > div {
+    background-size: 108px auto;
+    width: 100%;
+    height: 108px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.left > div:last-child > div > div > img {
+    height: 48px;
+    margin: 0 -12px -8px;
+    pointer-events: none;
+}
+.left > div:last-child > div:not(:first-child) > span {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 2px 0 0 #87533b, 0 2px 0 #87533b, -2px 0 0 #87533b, 0 -2px 0 #87533b;
+    line-height: 40px;
+}
+.right > div:last-child > div:nth-child(1) {
+    background-image: url(../images/hammer.png), url(../images/panels\ booster\ frame.png);
+}
+.right > div:last-child > div:nth-child(2) {
+    background-image: url(../images/axe.png), url(../images/panels\ booster\ frame.png);
+}
+.right > div:last-child > div:nth-child(3) {
+    background-image: url(../images/retry.png), url(../images/panels\ booster\ frame.png);
+}
+.right > div:last-child > div:not(:last-child) {
+    margin-bottom: 20px;
+}
+.right > div:last-child > div {
+    background-color: transparent;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 102px auto, auto 156px;
+    width: 156px;
+    height: 156px;
+    padding-right: 14px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.right > div:last-child > div > span {
+    color: #fff;
+    font-size: 64px;
+    font-weight: 700;
+    text-shadow: 6px 0 0 #87533b, 0 6px 0 #87533b, -6px 0 0 #87533b, 0 -6px 0 #87533b;
+    line-height: 65px;
+    pointer-events: none;
+}

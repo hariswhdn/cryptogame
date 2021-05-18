@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/axe.png" type="image/png">
+</head>
+<body>
+    <div class="container-fluid auth">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card">
+                    <div class="card-header">Earning Area</div>
+                    <div class="card-body">
+                        <p>Sorry, we couldn't match any account</p>
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Username" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1"></label>
+                                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                            </div>
+                            <button type="button" class="btn btn-success" onclick="window.location.href = 'dashboard.html';">Login</button>
+                            <button type="button" class="btn btn-warning" onclick="window.location.href = 'register.html';">Goto Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
